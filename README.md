@@ -1,9 +1,9 @@
 # redactor-fontSize
-Adds a button to toolbar to change font size. Button shows current user choice or font size of current caret position (current selected text).
+Adds a button to the toolbar to change the font size. The button always displays the selected font size at the current caret position.
 
 A plugin developed for [Redactor](http://imperavi.com/redactor/), a WYSIWYG rich-text editor made by [imperavi](http://imperavi.com/).
 
-The example uses [Angular Redactor] (https://github.com/TylerGarlick/angular-redactor).
+The example uses [Angular Redactor](https://github.com/TylerGarlick/angular-redactor).
 
 Feel free to contribute to this repository.
 
@@ -16,7 +16,7 @@ Include fontFamily.js in your markup:
 ```
 
 Add some styles to your css:
-```html
+```css
 .redactor-toolbar li .re-icon.re-fontSizeList{
     width:auto;
     text-transform: capitalize;
