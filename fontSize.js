@@ -25,6 +25,15 @@ if (!RedactorPlugins) var RedactorPlugins = {};
         this.core.getElement()[0].style.fontSize = options.defaultSize + 'px';
         this.button.addDropdown(button, dropdown);
 
+        this.opts.dropdownShowCallback = function(dropdown, key, button)
+			  {
+				  if(dropdown.key === "fontSizeList") {
+					  $(".redactor-dropdown-box-fontSizeList").children().each(function (index, value) {
+						  $(value).css("font-size", value.text);  
+					  });
+				  }
+			  }
+			
         this.opts.clickCallback = function () {
           this.fontSize.caretChanged(this);
         };
