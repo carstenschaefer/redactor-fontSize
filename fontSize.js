@@ -50,7 +50,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
         this.inline.format('span', 'style', 'font-size:' + size + 'px;');
       },
       caretChanged: function (t) {
-        var node = t.sel.focusNode.parentElement;
+        var node = t.sel.focusNode.nodeType == 3 ? t.sel.focusNode.parentNode : t.sel.focusNode;
         var size = window.getComputedStyle(node, null).getPropertyValue('font-size');
 
         size = size.replace(/px+/g, '');
