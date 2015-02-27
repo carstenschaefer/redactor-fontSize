@@ -2,7 +2,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 
 (function ($) {
   RedactorPlugins.fontSize = function () {
-    var arrows = [37, 38, 39, 40];
+    var keys = [8,33,34,35,36,37,38,39,40];  
 
     return {
       init: function () {
@@ -40,7 +40,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 
         this.opts.keyupCallback = function (e) {
           var key = e.keyCode || e.which;
-          if (arrows.indexOf(key) === -1) return;
+          if (keys.indexOf(key) === -1) return;
 
           this.fontSize.caretChanged(this);
         };
