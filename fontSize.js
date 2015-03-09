@@ -22,9 +22,16 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 
         var button = this.button.add('fontSizeList', "Font Size");
         button[0].innerHTML = options.defaultSize;
-        this.core.getElement()[0].style.fontSize = options.defaultSize + 'px';
-        this.button.addDropdown(button, dropdown);
-
+		this.button.addDropdown(button, dropdown);
+		
+        var editor = this.core.getElement()[0];
+		if(editor.firstChild == null){
+			editor.style.fontSize = options.defaultSize + 'px';
+        }
+        else {
+			editor.firstChild.style.fontSize = options.defaultSize + 'px';
+        }
+		
         this.opts.dropdownShowCallback = function (dropdown, key, button) {
           if (dropdown.key === "fontSizeList") {
             $(".redactor-dropdown-box-fontSizeList").children().each(function (index, value) {
