@@ -20,7 +20,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
           };
         });
 
-       var button = this.button.addAfter('fontList', 'fontSize', 'Font Size');
+       var button = this.button.addAfter('fontList', 'fontSizeList', 'Font Size');
         button[0].innerHTML = options.defaultSize;
 		this.button.addDropdown(button, dropdown);
 		
